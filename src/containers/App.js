@@ -4,6 +4,7 @@ import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 import Scroll from '../components/Scroll';
 import './App.css';
+import Header from '../components/Header';
 
 import { setSearchField, requestRobots } from '../actions'
 
@@ -37,7 +38,7 @@ class App extends Component {
     return isPending ?
      <h1>Loading</h1> :
        (<div className='tc'>
-        <h1 className='f1'>RoboFriends</h1>
+        <Header />
         <SearchBox searchChange={onSearchChange}/>
         <Scroll>
           <CardList robots={filteredRobots}/>
